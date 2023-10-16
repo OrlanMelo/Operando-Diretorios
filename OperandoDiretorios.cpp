@@ -16,9 +16,9 @@ public:
 		try
 		{
 			if (create_directory(Diretorio) == true)
-				cout << "O diretório foi criado com sucesso.\n";
+				cout << "O diretÃ³rio foi criado com sucesso.\n";
 			else
-				cout << "Não foi possível criar o diretório..";
+				cout << "NÃ£o foi possÃ­vel criar o diretÃ³rio..";
 		}
 		catch (filesystem_error& erro)
 		{
@@ -31,9 +31,9 @@ public:
 		try
 		{
 			if (create_directories(Arvore) == true)
-				cout << "O diretório principal e a árvore foi criada.\n";
+				cout << "O diretÃ³rio principal e a Ã¡rvore foi criada.\n";
 			else
-				cout << "Não foi possível criar a árvore de diretórios..";
+				cout << "NÃ£o foi possÃ­vel criar a Ã¡rvore de diretÃ³rios..";
 		}
 		catch (filesystem_error& erro)
 		{
@@ -61,9 +61,13 @@ public:
 			error_code codigo;
 
 			if (IncluirSubdiretorios == true)
+			{
 				_Remove_all_dir(Diretorio, codigo, max);
+			}
 			else
+			{
 				remove(Diretorio);
+			}
 		}
 		catch (filesystem_error& erro)
 		{
@@ -76,7 +80,7 @@ public:
 int main()
 {
 
-	cout << "O assistente está efetuando manipulações e tarefas no diretório...";
+	cout << "O assistente estÃ¡ efetuando manipulaÃ§Ãµes e tarefas no diretÃ³rio...";
 
 	Funcoes.CriarDiretorio((path)"C:\\teste2");
 	Funcoes.CriarArvoreDeDiretorios((path)"C:\\Pai/subdir1/subdir2");
