@@ -16,9 +16,13 @@ public:
 		try
 		{
 			if (create_directory(Diretorio) == true)
+			{
 				cout << "O diretório foi criado com sucesso.\n";
+			}
 			else
+			{
 				cout << "Não foi possível criar o diretório..";
+			}
 		}
 		catch (filesystem_error& erro)
 		{
@@ -31,9 +35,13 @@ public:
 		try
 		{
 			if (create_directories(Arvore) == true)
+			{
 				cout << "O diretório principal e a árvore foi criada.\n";
+			}
 			else
+			{
 				cout << "Não foi possível criar a árvore de diretórios..";
+			}
 		}
 		catch (filesystem_error& erro)
 		{
